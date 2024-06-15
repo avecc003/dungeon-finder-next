@@ -1,4 +1,10 @@
-import UserIcon from "./UserIcon";
+import {
+  SignIn,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
 import Image from "next/image";
 
 export default function Header() {
@@ -13,10 +19,15 @@ export default function Header() {
             <li> Create Game </li>
           </ul>
         </div>
-        <div>
-            <button className="mr-[1rem]"> Find Game </button>
-            <button> New Game </button>
-            <UserIcon></UserIcon>
+        <div className="flex ">
+          <button className="mr-[1rem]"> Find Game </button>
+          <button className="mr-[1rem]"> New Game </button>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+          <SignedOut>
+            <SignInButton />
+          </SignedOut>
         </div>
       </header>
     </>
