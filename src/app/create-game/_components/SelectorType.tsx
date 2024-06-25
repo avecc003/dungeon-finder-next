@@ -12,7 +12,7 @@ import {
 
 export default function SelectType() {
   return (
-    <Select>
+    <Select name="partyType">
       <SelectTrigger className="w-[180px]">
         <SelectValue placeholder="Select a  vibe for your game"/>
       </SelectTrigger>
